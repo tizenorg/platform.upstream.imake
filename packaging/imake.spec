@@ -45,14 +45,7 @@ make %{?_smp_mflags}
 %{_bindir}/mkhtmlindex
 %{_bindir}/revpath
 %{_bindir}/xmkmf
-%{_mandir}/man1/ccmakedep.1%{?ext_man}
-%{_mandir}/man1/cleanlinks.1%{?ext_man}
-%{_mandir}/man1/imake.1%{?ext_man}
-%{_mandir}/man1/makeg.1%{?ext_man}
-%{_mandir}/man1/mergelib.1%{?ext_man}
-%{_mandir}/man1/mkdirhier.1%{?ext_man}
-%{_mandir}/man1/mkhtmlindex.1%{?ext_man}
-%{_mandir}/man1/revpath.1%{?ext_man}
-%{_mandir}/man1/xmkmf.1%{?ext_man}
+
+%docs_package
 
 %changelog
