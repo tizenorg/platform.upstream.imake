@@ -6,6 +6,7 @@ Summary:        C preprocessor interface to the make utility
 Url:            http://xorg.freedesktop.org/
 Group:          Development/Tools/Building
 Source:         %{name}-%{version}.tar.bz2
+Source1001: 	imake.manifest
 BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
 BuildRequires:  pkgconfig(xproto)
@@ -25,6 +26,7 @@ converted.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --with-config-dir=%{_datadir}/X11/config
@@ -34,6 +36,7 @@ make %{?_smp_mflags}
 %make_install
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %doc COPYING README
 %{_bindir}/ccmakedep
